@@ -1,0 +1,147 @@
+/* Base styles - changed to row layout by default */
+.card-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.card-containerTwo {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;    
+    gap: 1.5rem;
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.card {
+    flex: 1 1 calc(33.333% - 1rem);
+    min-width: 250px;
+    max-width: 400px;
+    margin: 0;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* Fix paragraph overflow */
+.card p {
+    margin: 1rem 0;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    /* hyphens: auto; */
+    line-height: 1.5;
+    max-width: 100%;
+}
+
+/* Fix heading overflow */
+.card h2 {
+    margin: 0 0 1rem;
+    font-size: 1.5rem;
+    overflow-wrap: break-word;
+}
+
+/* Adjust breakpoints for better row display */
+@media (min-width: 768px) {
+    .card {
+        flex-basis: calc(33.333% - 2rem);
+    }
+}
+
+@media (max-width: 767px) {
+    .card {
+        flex-basis: calc(50% - 1.5rem);
+    }
+}
+
+@media (max-width: 580px) {
+    .card {
+        flex-basis: 100%;
+    }
+}
+
+.hover-btn {
+    padding: 8px 16px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 200px;
+}
+
+/* Tablet (768px and up) */
+@media (min-width: 768px) {
+    .card-container {
+        gap: 2rem;
+        padding: 2rem;
+        align-content: flex-start;
+        height: 100%;
+    }
+
+    .card {
+        width: calc(50% - 2rem);
+        padding: 1.5rem;
+    }
+
+    .hover-btn {
+        width: auto;
+    }
+}
+
+/* Desktop (1024px and up) */
+@media (min-width: 1024px) {
+    .card {
+        width: calc(33.333% - 2rem);
+        padding: 2rem;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+    }
+
+    .hover-btn:hover {
+        background: #2160a3;
+        transform: scale(1.5);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+
+}
+}
+
+/* Large screens (1200px and up) */
+@media (min-width: 1200px) {
+    .card-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 1200px) {
+    .card {
+        flex: 0 1 calc(50% - 1rem);
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 100%;
+        margin: 0;
+    }
+}
