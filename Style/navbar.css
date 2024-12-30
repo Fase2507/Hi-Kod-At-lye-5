@@ -1,11 +1,15 @@
 /* Add these navbar styles to your existing CSS */
 .navbar {
+    position: sticky;
+    top: 0; 
+    z-index: 1001;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
+    background-color: #185894;
+    box-shadow: 0 2px 5px rgba(110,0,10,1.1);  /* Optional: adds subtle shadow */
     color: white;
-    padding: 10px;
+    padding: 1rem 2rem;
 }
 
 .brand {
@@ -29,7 +33,22 @@
 }
 
 .navbar-links li a:hover {
-    background-color: #555;
+    background-color: #f5f5f5;
+    color: #000;
+    border-radius: 10px;
+    transform: scale(1.15);
+    transition: all 0.3s ease;
+    -webkit-transform: scale(1.15);
+    -moz-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    -o-transform: scale(1.15);
+}
+.navbar-links li a:active{
+    background-color: #f0ebeb;
+    color: #000;
+    border-radius: 10px;
+    transform: scale(1.15);
+    transition: all 0.3s ease;
 }
 
 .toggle-button {

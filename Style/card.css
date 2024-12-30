@@ -1,3 +1,6 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@400;600&family=Sofia&display=swap');
+
 /* Base styles - changed to row layout by default */
 .card-container {
     display: flex;
@@ -37,16 +40,15 @@
     text-align: center;
     box-sizing: border-box;
     overflow: hidden;
+    font-family: 'Open Sans', sans-serif;
 }
-
-/* Fix paragraph overflow */
-.card p {
-    margin: 1rem 0;
-    overflow-wrap: break-word;
-    word-wrap: break-word;
+p {
+    
     /* hyphens: auto; */
-    line-height: 1.5;
-    max-width: 100%;
+    line-height: 2.5;
+    text-shadow: 2px 2px 2px #fdfafa, 2px 2px 2px #6cb113, 2px 2px 2px #48be39;
+    word-spacing: 24px;
+    font-family: 'Open Sans', sans-serif;
 }
 
 /* Fix heading overflow */
@@ -54,6 +56,25 @@
     margin: 0 0 1rem;
     font-size: 1.5rem;
     overflow-wrap: break-word;
+    font-family: 'Sofia', sans-serif;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.card h2 i {
+    font-size: 1.2rem;
+    color: #007bff;  /* or any color you prefer */
+}
+
+/* Optional: Add hover effect to icons */
+.card h2 i:hover {
+    transform: scale(1.35);
+    transition: transform 0.2s ease;
+    cursor: pointer;
+    
 }
 
 /* Adjust breakpoints for better row display */

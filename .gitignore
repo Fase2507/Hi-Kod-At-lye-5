@@ -14,7 +14,7 @@ build/
 # Ignore OS-specific files
 .DS_Store
 Thumbs.db
-
+Table.html
 # Ignore IDE-specific files
 .vscode/
 .idea/

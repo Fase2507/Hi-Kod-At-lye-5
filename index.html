@@ -5,7 +5,9 @@
         <meta charset="UTF-8"> 
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <link rel="stylesheet" href="Style/card.css">
+        <link rel="stylesheet" href="Style/search-bar.css">
         <link rel="stylesheet" href="Style/navbar.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     </head>
     <body>
         <nav class="navbar">
@@ -15,6 +17,11 @@
             <span class="bar"></span>
             <span class="bar"></span>
           </a>
+          <div class="search-bar">
+            <input type="text" id="search" placeholder="Search" >
+              <label for="search"><a class="fas fa-search"></a></label>
+  
+          </div>
           <div class="navbar-links">
             <ul>
               <li><a href="#">Home</a></li>
@@ -24,42 +31,43 @@
             </ul>
           </div>
         </nav>
+        
         <h1>HELLO WORLD!!</h1>
         <center><h1>We started</h1></center>
         <div class="card-container">
             <div title="Card 1" class="card">
-              <h2>Card 1</h2>
-              <p>Some text description for card 1</p>
+              <h2><i class="fas fa-shopping-cart"></i> Shopping Title</h2>
+              <p>Line heigth </p>
               <button class="hover-btn">Learn More</button>
             </div>
             
             <div title="Card 2" class="card">
-              <h2>Card 2</h2>
-              <p>Some text description for card 2</p>
+              <h2><i class="fas fa-book"></i> Reading Title</h2>
+              <p>Word spacing card 2</p>
               <button class="hover-btn">Learn More</button>
             </div>
             
             <div title="Card 3" class="card">
-              <h2>Card 3</h2>
+              <h2><i class="fas fa-music"></i> Music Title</h2>
               <p>Some text description for card 3</p>
               <button class="hover-btn">Learn More</button>
           </div>
 
           <div class="card-containerTwo">
               <div title="Card 1" class="card">
-                <h2>Card 1</h2>
+                <h2><i class="fas fa-cog"></i> Settings</h2>
                 <p>Some text description for card 1</p>
                 <button class="hover-btn">Learn More</button>
               </div>
               
               <div title="Card 2" class="card">
-                <h2>Card 2</h2>
+                <h2><i class="fas fa-home"></i> Home Title</h2>
                 <p>Some text description for card 2</p>
                 <button class="hover-btn">Learn More</button>
               </div>
               
               <div title="Card 3" class="card">
-                <h2>Card 3</h2>
+                <h2><i class="fas fa-user"></i> User Title</h2>
                 <p>Some text description for card 3</p>
                 <button class="hover-btn">Learn More</button>
             </div>
