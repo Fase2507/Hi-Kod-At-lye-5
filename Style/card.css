@@ -41,6 +41,8 @@
     box-sizing: border-box;
     overflow: hidden;
     font-family: 'Open Sans', sans-serif;
+    transform: scale(1);
+    transition: all 0.3s ease;
 }
 p {
     
@@ -164,5 +166,9 @@ p {
     .card {
         flex: 1 1 100%;
         margin: 0;
+    }
+
+    .card:hover {
+        transform: scale(1.05);
     }
 }
