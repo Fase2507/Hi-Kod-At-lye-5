@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Umut Dolu Hikayeler - Çocuk Hakları ve Başarı Öyküleri</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .hero-section {
+            height: 70vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('https://images.unsplash.com/photo-1542810634-71277d95dcbb') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 3rem;
+        }
+
+        .story-card {
+            transition: transform 0.3s ease;
+            height: 100%;
+        }
+
+        .story-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card-img-top {
+            height: 250px;
+            object-fit: cover;
+        }
+
+        @media (max-width: 768px) {
+            .hero-section {
+                height: 50vh;
+            }
+            
+            .story-box {
+                padding: 1.5rem !important;
+            }
+        }
+    </style>
+</head>
+<body class="bg-light">
+
+<!-- Hero Section -->
+<section class="hero-section text-white text-center">
+    <div class="container">
+        <h1 class="display-4 mb-4 fw-bold">Her Çocuk Bir Dünya</h1>
+        <p class="lead fs-3">Geleceğimizin teminatı çocuklarımızın başarı hikayeleri</p>
+    </div>
+</section>
+
+<!-- Story Box -->
+<main class="container">
+    <section class="story-box bg-white rounded-4 shadow-lg p-5 mb-5">
+        <h2 class="text-center mb-4 display-5">Geleceği Şekillendiren Hikayeler</h2>
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <p class="lead">Çocuk hakları ve fırsat eşitliğinin gücünü gösteren ilham verici öyküler...</p>
+                <p>Dünya çapında, dezavantajlı koşullara rağmen büyük başarılara imza atmış gençlerin mücadeleleri ve azim dolu yolculukları...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story Cards -->
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-5">
+        <!-- Van'ın Yıldızı -->
+        <div class="col" data-url="https://example.com/van-ahmet">
+            <article class="card story-card h-100 shadow">
+                <img src="resimler/maya.jpg" class="card-img-top" alt="Ahmet Van'da bilim ödülü alırken">
+                <div class="card-body">
+                    <h3 class="card-title h5">Van'ın Bilim Yıldızı</h3>
+                    <p class="card-text">Uluslararası bilim olimpiyatlarında altın madalya kazanan Ahmet'in öyküsü...</p>
+                </div>
+            </article>
+        </div>
+
+        <!-- İzmir'in Mucidi -->
+        <div class="col" data-url="https://example.com/izmir-ayse">
+            <article class="card story-card h-100 shadow">
+                <img src="resimler/azab.jpg" class="card-img-top" alt="Ayşe teknoloji projesini sunarken">
+                <div class="card-body">
+                    <h3 class="card-title h5">İzmir'in Genç Mucidi</h3>
+                    <p class="card-text">Geliştirdiği yenilenebilir enerji projesiyle dünya çapında ödül alan Ayşe...</p>
+                </div>
+            </article>
+        </div>
+
+        <!-- Malala -->
+        <div class="col" data-url="https://example.com/malala">
+            <article class="card story-card h-100 shadow">
+                <img src="resimler/Malala.jpg" class="card-img-top" alt="Malala Yousafzai konuşma yaparken">
+                <div class="card-body">
+                    <h3 class="card-title h5">Malala: Eğitim Savaşçısı</h3>
+                    <p class="card-text">Nobel ödüllü aktivist Malala'nın kız çocuklarının eğitim mücadelesi...</p>
+                </div>
+            </article>
+        </div>
+
+        <!-- Yusra Mardini -->
+        <div class="col" data-url="https://example.com/yusra">
+            <article class="card story-card h-100 shadow">
+                <img src="resimler/yusra.jpg" class="card-img-top" alt="Yusra Mardini Olimpiyatlar'da yüzerken">
+                <div class="card-body">
+                    <h3 class="card-title h5">Yusra: Mülteci Olimpisyen</h3>
+                    <p class="card-text">Mülteci kampından olimpiyat havuzuna uzanan inanılmaz yolculuk...</p>
+                </div>
+            </article>
+        </div>
+
+        <!-- Diğer Kartlar -->
+        <!-- Her kart için benzer yapıyı kullanın -->
+    </div>
+</main>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    // Tıklanabilir Kartlar
+    document.querySelectorAll('.col[data-url]').forEach(card => {
+        card.style.cursor = 'pointer';
+        card.addEventListener('click', () => {
+            window.open(card.dataset.url, '_blank');
+        });
+    });
+</script>
+
+</body>
+</html>

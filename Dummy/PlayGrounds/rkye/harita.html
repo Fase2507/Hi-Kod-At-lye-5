@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Umut Dolu Hikayeler</title>
+    <style>
+    * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+    }
+    .story-section {
+        padding: 0;
+        background: #f9f9f9;
+    }
+
+    .story-hero {
+        display: flex;
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background: url('https://images.unsplash.com/photo-1542810634-71277d95dcbb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover;
+        margin-bottom: 50px;
+    }
+
+    .story-hero-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        text-align: center;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        font-size: 2.5em;
+    }
+
+    .story-hero-text h1 {
+        font-size: 3em;
+        margin-bottom: 20px;
+    }
+
+    .story-hero-text p {
+        font-size: 1.2em;
+    }
+
+    .story-box {
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        padding: 90px;
+        margin: 0 auto 100px;
+        height: 400px;
+        max-width: 1300px;
+        text-align: center;
+    }
+
+    .story-cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .story-card {
+        flex: 1 1 300px;
+        max-width: 350px;
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 
+            0 5px 15px rgba(0,0,0,0.1),
+            0 15px 35px rgba(0,0,0,0.05);
+        transition: all 0.3s ease;
+        position: relative;
+    }
+
+    .story-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 
+            0 15px 30px rgba(0,0,0,0.15),
+            0 25px 45px rgba(0,0,0,0.1);
+    }
+
+    .story-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .story-card-content {
+        padding: 20px;
+        background: linear-gradient(to bottom, #ffffff, #f8f8f8);
+    }
+
+    .story-card-content h3 {
+        color: #333;
+        margin-bottom: 10px;
+        font-size: 1.4em;
+    }
+
+    .story-card-content p {
+        color: #666;
+        line-height: 1.6;
+    }
+
+    .story-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(45deg, rgba(255,107,107,0.1), rgba(255,107,107,0));
+        z-index: 1;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .story-card:hover::before {
+        opacity: 1;
+    }
+</style>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+<section class="story-section">
+    <div class="story-hero">
+        <div class="story-hero-text">
+            <p>Her çocuğun hikayesi, geleceğin umut dolu bir sayfasıdır.</p>
+        </div>
+    </div>
+
+    <div class="story-box">
+        <h2> Geleceği Şekillendiren Hikayeler</h2>
+        <p>Çocuklar, her toplumun en değerli varlıklarıdır. Onların hakları, sadece korunmak değil, aynı zamanda gelişimlerini sürdürebilmek ve potansiyellerini gerçekleştirebilmek için büyük bir öneme sahiptir. Bu web sitesi, çocuk hakları konusunda ilham veren, zorluklarla mücadele ederek büyük başarılara imza atmış bireylerin hikayelerini paylaşmak için oluşturuldu.
+            Dünya çapında, çocukluklarında karşılaştıkları engellere rağmen büyüyüp topluma katkı sağlayan pek çok insan  çocuk hakları ve fırsat eşitliği için mücadelesini sürdürüyor ve kendi başarılarını başkalarına umut kaynağı olacak şekilde şekillendiriyor.
+        Bu platformda, çocuk haklarının ne kadar önemli olduğunu ve her çocuğun eşit fırsatlar ile geleceğe umutla bakabileceğini gösteren başarı hikayelerini bulacaksınız. Çünkü her çocuk, hayallerini gerçekleştirebilme gücüne sahip; sadece doğru fırsatlar ve destekle.
+        Geliniz, bu hikayelerle çocukların potansiyellerinin nasıl şekillendiğini ve toplumları nasıl dönüştürdüğünü keşfedin. Çünkü her başarı, bir çocuğun hakkını almasıyla başlar.</p>
+    </div>
+
+    <div class="story-cards">
+        <div class="story-card">
+            <img src="resimler/maya.jpg" alt="Van'dan Hikaye">
+            <div class="story-card-content">
+                <h3>Van'dan Yükselen Yıldız</h3>
+                <p>Van'da yaşayan Ahmet'in bilim olimpiyatlarındaki başarı öyküsü...</p>
+            </div>
+        </div>
+
+        <div class="story-card">
+            <img src="resimler/azab.jpg" alt="İzmir'den Hikaye">
+            <div class="story-card-content">
+                <h3>İzmir'in Genç Mucidi</h3>
+                <p>İzmir'de yaşayan Ayşe'nin teknoloji projeleriyle açtığı yeni ufuklar...</p>
+            </div>
+        </div>
+
+        <div class="story-card">
+            <img src="resimler/manal.jpg" alt="Ankara'dan Hikaye">
+            <div class="story-card-content">
+                <h3>Ankara'nın Sanat Elçisi</h3>
+                <p>Ankara'da resim yaparak dünyaya açılan Mehmet'in sanat yolculuğu...</p>
+            </div>
+        </div>
+
+        <div class="story-card">
+            <img src="resimler/esra.jpg" alt="Ankara'dan Hikaye">
+            <div class="story-card-content">
+                <h3>Ankara'nın Sanat Elçisi</h3>
+                <p>Ankara'da resim yaparak dünyaya açılan Mehmet'in sanat yolculuğu...</p>
+            </div>
+        </div>
+
+        <div class="story-card">
+            <img src="resimler/aliç.jpeg" alt="Ankara'dan Hikaye">
+            <div class="story-card-content">
+                <h3>Ankara'nın Sanat Elçisi</h3>
+                <p>Ankara'da resim yaparak dünyaya açılan Mehmet'in sanat yolculuğu...</p>
+            </div>
+        </div>
+
+        <div class="story-card">
+            <img src="resimler/Malala.jpg" alt="Ankara'dan Hikaye">
+            <div class="story-card-content">
+                <h3>Ankara'nın Sanat Elçisi</h3>
+                <p>Ankara'da resim yaparak dünyaya açılan Mehmet'in sanat yolculuğu...</p>
+            </div>
+        </div>
+
+        <div class="story-card">
+            <img src="resimler/mahmut.png" alt="Ankara'dan Hikaye">
+            <div class="story-card-content">
+                <h3>Ankara'nın Sanat Elçisi</h3>
+                <p>Ankara'da resim yaparak dünyaya açılan Mehmet'in sanat yolculuğu...</p>
+            </div>
+        </div>
+
+        <div class="story-card">
+            <img src="resimler/jawed.jpeg" alt="Ankara'dan Hikaye">
+            <div class="story-card-content">
+                <h3>Ankara'nın Sanat Elçisi</h3>
+                <p>Ankara'da resim yaparak dünyaya açılan Mehmet'in sanat yolculuğu...</p>
+            </div>
+        </div>
+
+        <div class="story-card">
+            <img src="resimler/firas.jpeg" alt="Ankara'dan Hikaye">
+            <div class="story-card-content">
+                <h3>Ankara'nın Sanat Elçisi</h3>
+                <p>Ankara'da resim yaparak dünyaya açılan Mehmet'in sanat yolculuğu...</p>
+            </div>
+        </div>
+
+        <div class="story-card">
+            <img src="resimler/sarya.jpg" alt="Ankara'dan Hikaye">
+            <div class="story-card-content">
+                <h3>Ankara'nın Sanat Elçisi</h3>
+                <p>Ankara'da resim yaparak dünyaya açılan Mehmet'in sanat yolculuğu...</p>
+            </div>
+        </div>
+
+        <div class="story-card">
+            <img src="resimler/yusra.jpg" alt="Ankara'dan Hikaye">
+            <div class="story-card-content">
+                <h3>Ankara'nın Sanat Elçisi</h3>
+                <p>Ankara'da resim yaparak dünyaya açılan Mehmet'in sanat yolculuğu...</p>
+            </div>
+        </div>
+
+        <div class="story-card">
+            <img src="resimler/abdullah.jpg" alt="Ankara'dan Hikaye">
+            <div class="story-card-content">
+                <h3>Ankara'nın Sanat Elçisi</h3>
+                <p>Ankara'da resim yaparak dünyaya açılan Mehmet'in sanat yolculuğu...</p>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="map-container">
+    <h2>Hikayelerin Coğrafyası</h2>
+    <div id="world-map"></div>
+</div>
+
+<script>
+    // Tüm hikaye kartlarını seç
+    const storyCards = document.querySelectorAll('.story-card');
+
+    // Her karta tıklama olayı ekle
+    storyCards.forEach((card, index) => {
+        card.style.cursor = 'pointer'; // İmleci el işaretine çevir
+        
+        card.addEventListener('click', () => {
+            // Her kartın gideceği URL'leri tanımla
+            const storyUrls = [
+                'https://toplummerkezi.kizilay.org.tr/haberler-etkinlikler/yararlanici-hikayeleri/filistinden-turkiyeye-bir-basari-oykusu',
+                'https://www.unicefturk.org/yazi/ahmetveharry',
+                'https://www.unicefturk.org/yazi/savasin-biraktigi-gorunmeyen-yaralar',
+                'https://www.unicefturk.org/yazi/dunyanin-sonunun-geldigini-hissedebilir-misin',
+                'https://www.aa.com.tr/tr/dunya/sudanli-abdullahin-multeci-kampinda-baslayan-basari-hikayesi-turkiyenin-destegiyle-suruyor/2695611',
+                'https://www.indyturk.com/node/318421/ya%C5%9Fam/3-insan-3-hikaye-sava%C5%9F%C4%B1n-yenemedi%C4%9Fi-suriyeli-gen%C3%A7ler'
+            ];
+            
+            // İlgili hikayenin sayfasına yönlendir
+            window.location.href = storyUrls[index];
+        });
+    });
+</script>

@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+    <body>
+
+        <div class="moca">
+            <input title="input" type="text" class="ipt" value="input" />
+            <button id="btn2" onclick="resetInput2()">RESET2</button>
+            <input title="input" type="text" id="input" value="input" />
+            <button id="btn" onclick="changeInput()">change input</button>
+            <button id="reset" onclick="resetInput()">Reset</button>
+            <button id="changeAll" onclick="changeAllInput()">Change All</button>
+        </div>
+        <h1 id="root">
+            
+            <h2></h2>
+        </h1>
+        <button onclick="changeElement()">CHANGE</button>
+        <button onclick="changeElement2()">CHANGE2</button>
+            <script src="PlayGround.js"></script>
+            <script>
+                    
+            </script>
+
+    </body>       
+</html>    
+<!-- <!DOCTYPE html>
+<html lang="tr">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+        <script>
+        const vize=prompt("Vize notunuzu giriniz: ");  
+        const final=prompt("Final notunuzu giriniz: ");
+        /**
+         * Hesapla
+         * @param {number} vize - Vize notu
+         * @param {number} final - Final notu
+         * @returns {number} Hesaplanm  sonu 
+         */
+            function hesap(vize,final){
+                if(vize<0 || vize>100 || final<0 || final>100){
+                    return "Geçersiz not girdiniz";
+                }
+                else if(vize==null || final==null){
+                    return "Boş değer girdiniz";
+                }
+
+            
+                var sonuc= (vize*0.4)+(final*0.6);
+
+                if (sonuc>=50){
+                    window.alert(`geçtiniz ortalama ${sonuc}`);
+                }
+                else{
+                    window.alert(`kaldiniz ortalama ${sonuc}`);
+                }
+            }
+            console.log(hesap(vize,final)); 
+        </script>
+</body>
+</html> -->

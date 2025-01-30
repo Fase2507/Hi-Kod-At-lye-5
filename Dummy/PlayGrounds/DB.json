@@ -1,0 +1,26 @@
+{
+  "employees": [
+    {
+      "id": "8a22",
+      "firsName": "Selma",
+      "lastName": "Uykucu",
+      "Birthday": "2003-01-01",
+      "salary": "28990"
+    },
+    {
+      "id": "8610",
+      "firsName": "Murat",
+      "lastName": "Gürbüz",
+      "Birthday": "2002-02-20",
+      "salary": "19990"
+    },
+    {
+      "id": "faa1",
+      "firsName": "ali",
+      "lastName": "rızo",
+      "Birthday": "1002-09-09",
+      "salary": "67111"
+    }
+    
+  ]
+}
