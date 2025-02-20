@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissor</title>
+  <link rel="stylesheet" href="10-rock-paper-scissor.css">
+</head>
+<body>
+  <h1 class="title">Rock Paper Scissor</h1>
+  <h3 id="temprora">Pick one and Start!</h3>
+  <h5 id="tempro">btw you can use 'q,w,e' after you picked one</h5>
+  <h3 id="result"></h3>
+  <!-- <h2 id="point">Point</h2> -->
+
+  <button onclick="playGame('rock');" class="move-btn" onkeydown="keyStroke(event);" ondblclick="window.alert('after you picked your first choose u can use q,w,e keys to play.');">
+
+    <img src="rock-emoji.png" alt="rock" class="move-icon">
+  </button>
+  <button onclick="playGame('paper');" class="move-btn" onkeydown="keyStroke(event);">
+    <img src="paper-emoji.png" alt="paper" class="move-icon">
+  </button>
+  <button onclick="playGame('scissor');" class="move-btn" onkeydown="keyStroke(event);">
+    <img src="scissor-emoji.png" alt="scissor" class="move-icon">
+  </button>
+    <p class="js-result result"> </p>
+    <p class="js-move">
+      
+    </p>
+    <p class="js-score score"></p>
+
+  <button onclick="reset()" class="reset-score-btn">
+    reset
+  </button>
+
+  <script src="10-rock-paper-scissor.js"></script>
+</body>
+
+</html>
